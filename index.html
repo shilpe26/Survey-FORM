@@ -1,14 +1,23 @@
-
+<!DOCTYPE html>
+<html>
 <head>
   <title>build a survey form - freecodecamp</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
 </head>
 
 <body>
+<div class="container-fluid">  
   <header>
     <section class="title-text">
-      <h1 id="title"><u>Freecodecamp Survey Form</u></h1>
-      <p id="description" class="title-text"><em style="font-size: 90%;">Let us know how we can improve freeCodeCamp</em></p>
+      <h1 id="title" class="text-center"><u>Freecodecamp Survey Form</u></h1>
+      <p id="description" class="text-center"><em>Let us know how we can improve freeCodeCamp</em></p>
     </section>
   </header>
   
@@ -16,72 +25,84 @@
     <form id="survey-form">
       <section id="survey-fields">
         <!-- identification fields -->
-        <label for="name" id="name-label">Name</label><br>
-        <input class="form-control" id="name" type="text" placeholder="Enter your name" required><br>
-        <label for="Email" id="email-label">Email</label><br>
-        <input class="form-control" id="email" type="email" placeholder="Enter your email" required><br>
-        <label for="number" id="number-label">Age(optional)</label><br>
-        <input  class="form-control" id="number" type="number" placeholder="Enter your age" min=1 max=125 required><br>
-      
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input class="form-control" id="name" type="text" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="Email" id="email-label">Email</label>
+            <input class="form-control" id="email" type="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">  
+            <label for="number" id="number-label">Age(optional)</label>
+            <input  class="form-control" id="number" type="number" placeholder="Enter your age" min=10 max=100 required>
+        </div>
+          
         <!-- Which option best describes your current role -->
-        <label for="dropdown">Which option best describes your current role?</label><br>
-        <select class="form-control" id="dropdown" form="survey-form"><br>
-          <option class="form-control" value="" disabled selected>Select an option</option><br>
-          <option class="form-control" value="student">Student</option><br>
-          <option class="form-control" value="full-time-job">Full time job</option><br>
-          <option class="form-control" value="full-time-learner">Full time learner</option>
-          <option class="form-control" value="prefer-not">Prefer not to say</option>
-          <option class="form-control" value="other">Other</option><br>
-        </select><br>
+        <div class="form-group">
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select class="form-control" id="dropdown" form="survey-form">
+              <option class="form-control" value="" disabled selected>Select an option</option>
+              <option class="form-control" value="student">Student</option>
+              <option class="form-control" value="full-time-job">Full time job</option>
+              <option class="form-control" value="full-time-learner">Full time learner</option>
+              <option class="form-control" value="prefer-not">Prefer not to say</option>
+              <option class="form-control" value="other">Other</option><br>
+            </select>
+        </div>
       
         <!-- How likely is that you would recommend freeCodeCamp to a friend -->
-        <label for="recommendation">How likely is that you would recommend freeCodeCamp to a friend?</label><br>
-        <fieldset id="recommendation">
-          <label for="r_definitely"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_definitely" value="definitely" required>Definitely</label>
-          <label for="r_maybe"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_maybe" value="maybe" required>Maybe</label>
+        <div class="form-group">
+          <label for="recommendation">How likely is that you would recommend freeCodeCamp to a friend?</label>
+          <label for="r_definitely"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_definitely" value="definitely" required checked>Definitely</label><br>
+          <label for="r_maybe"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_maybe" value="maybe" required>Maybe</label><br>
           <label for="r_not_sure"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_not_sure" value="notsure" required>Not sure</label>
-        </fieldset><br>
+        </div>
         
         <!-- What do you like most in FCC -->
-        <label for="likethemost">What do you like most in FCC?</label><br>
-        <select class="form-control" id="likethemost"><br>
-          <option class="form-control" value="" disabled selected>Select an option</option><br>
-          <option class="form-control" value="challenges">Challenges</option><br>
-          <option class="form-control" value="projects">Projects</option><br>
-          <option class="form-control" value="community">Community</option><br>
-          <option class="form-control" value="open-source">Open Source</option><br>
-        </select><br>
+        <div class="form-group">  
+            <label for="likethemost">What do you like most in FCC?</label><br>
+            <select class="form-control" id="likethemost">
+              <option class="form-control" disabled selected>Select an option</option><br>
+              <option class="form-control" value="challenges">Challenges</option>
+              <option class="form-control" value="projects">Projects</option>
+              <option class="form-control" value="community">Community</option>
+              <option class="form-control" value="open-source">Open Source</option>
+            </select>
+        </div>
       
         <!-- Things that should be improved in the future -->
-        <label for="improvements">Things that should be improved in the future</label><br>
-        <fieldset id="improvements">
-          <legend>(<em>Check all that apply</em>)</legend>
-          <label for="c-fep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-fep" value="fep">Front-end Projects</label>
-          <label for="c-bep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-bep" value="bep">Back-end Projects</label>
-          <label for="c-datav"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-datav" value="datav">Data Visualization</label>
-          <label for="c-chlgs"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-chlgs" value="chlgs">Challenges</label>
-          <label for="c-osc"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-osc" value="osc">Open Source Community</label>
-          <label for="c-ghr"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-ghr" value="ghr">Gitter help rooms</label>
-          <label for="c-vid"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-vid" value="vid">Videos</label>
-          <label for="c-meet"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-meet" value="meet">City Meetups</label>
-          <label for="c-wiki"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-wiki" value="wiki">Wiki</label>
-          <label for="c-forum"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-forum" value="forum">
-Forum</label>
-          <label for="c-addcours"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-addcours" value="addcours">Additional Courses</label><br>
-        </fieldset><br>
-       
+        <div class="form-group">  
+            <label for="improvements">Things that should be improved in the future</label><br>
+            <fieldset id="improvements">
+              <label for="c-fep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-fep" value="fep" checked>Front-end Projects</label><br>
+              <label for="c-bep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-bep" value="bep">Back-end Projects</label><br>
+              <label for="c-datav"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-datav" value="datav">Data Visualization</label><br>
+              <label for="c-chlgs"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-chlgs" value="chlgs">Challenges</label><br>
+              <label for="c-osc"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-osc" value="osc">Open Source Community</label><br>
+              <label for="c-ghr"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-ghr" value="ghr">Gitter help rooms</label><br>
+              <label for="c-vid"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-vid" value="vid">Videos</label><br>
+              <label for="c-meet"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-meet" value="meet">City Meetups</label><br>
+              <label for="c-wiki"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-wiki" value="wiki">Wiki</label><br>
+              <label for="c-forum"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-forum" value="forum">Forum</label><br>
+              <label for="c-addcours"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-addcours" value="addcours">Additional Courses</label>
+            </fieldset>
+          </div>    
         <!-- Any Comments or Suggestions -->
-        <label for="comments">Any Comments or Suggestions?</label><br>
-        <textarea style="height:50px;resize:vertical;" class="form-control" id="comments" placeholder="Enter a comment"></textarea><br>
-      </section><br>
+         <div class="form-group">
+            <label for="comments">Any Comments or Suggestions?</label><br>
+            <textarea style="height:50px;resize:vertical;" class="input-textarea" id="comments" placeholder="Enter a comment"></textarea>
+          </div>
+      </section>
 
       <!-- submit -->
-       
-        
-      <button  class="btn btn-primary" type="submit" id="submit"><i class="fa fa-paper-plane">Submit</i>
-          </button><br></form>
+      <button  class="btn btn-primary btn-block" type="submit" id="submit"><i class="fa fa-paper-plane"></i>Submit</button>
+      </form>
     
   </main>
- 
+</div>   
 </body>
 
+</html>
