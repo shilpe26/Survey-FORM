@@ -1,36 +1,53 @@
-
-
 body {
-    backface-visibility: visible;
-    background-image: url("https://static1.bigstockphoto.com/4/5/3/large2/354187850.jpg");
-  
-  display: flex;
-  flex-direction: column;
-  font-family: "Raleway", Helvetica, sans-serif;
-    background-size: cover;
-    
-    background-repeat: no-repeat;
-  background-position: center;
+background-image: url('img/artiom-vallat-mFrLqRZMx7o-unsplash.jpg');
+background-color: black;
+font-family: "Raleway", Helvetica, sans-serif;
+background-size: cover;
+}
+.container-fluid{
+/*    background-color: rgba(128,128,128,0.5);*/
 }
 
-@media (max-width: 400px) {
-  body {
-    font-size: 13px;
+#title{
+    font-family: cursive;
+    font-size: 50px;
+    color: azure;
+    padding: 10px;
+    margin: auto;
+}
+#description{
+    font-family: 'Fondamento', cursive;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+}
+#survey-form {
+    font-family: 'Hind', sans-serif;
+    color: black;
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.form-group{
+    padding: 5px;
+}
+.input-textarea{
+    width: 100%;
+    min-height: 120px;
+    border-radius: 5px;
+    color: black;
+}
+@media screen and (max-width: 800px) {
+  #survey-form, #title, #description {
+    width: 98%; /* The width is 98%, when the viewport is 800px or smaller */
   }
 }
 
-h1 {
-  margin-bottom: 5px;
-}
 
-header {
- 
-  
-  width: 100%;
-  z-index: 1;
-  top: 0%;
-}
-
+/*
 main {
     
   opacity: 0.5;
@@ -84,22 +101,7 @@ main {
     
 }
 
-#survey-fields {
-  margin-left: 5%;
-  margin-right: 10%;
-    display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: grid;
-    text-align: left;
-  grid-gap: 10px;
-    box-sizing: border-box;
-    padding: 10px 0px 30px 30px    ;
-    width: 170%;
-    height: 100%;
-        
 
-}
 
 @media (max-width: 600px) {
   #survey-fields {
@@ -143,13 +145,6 @@ fieldset label:hover {
   font-size: 85%;
     font-family: serif bold;
 }
-#title{
-    font-family: cursive;
-    font-size: 50px;
-    color: azure;
-    padding: 2px;
-    margin-top: 10px;
-}
 .title-text{
     font-size: 30px;
     color: azure;
@@ -169,3 +164,4 @@ div{
   height: 2.375rem;
     font-size: 19px;
 }
+*/
