@@ -1,0 +1,87 @@
+
+<head>
+  <title>build a survey form - freecodecamp</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <section class="title-text">
+      <h1 id="title"><u>Freecodecamp Survey Form</u></h1>
+      <p id="description" class="title-text"><em style="font-size: 90%;">Let us know how we can improve freeCodeCamp</em></p>
+    </section>
+  </header>
+  
+  <main>
+    <form id="survey-form">
+      <section id="survey-fields">
+        <!-- identification fields -->
+        <label for="name" id="name-label">Name</label><br>
+        <input class="form-control" id="name" type="text" placeholder="Enter your name" required><br>
+        <label for="Email" id="email-label">Email</label><br>
+        <input class="form-control" id="email" type="email" placeholder="Enter your email" required><br>
+        <label for="number" id="number-label">Age(optional)</label><br>
+        <input  class="form-control" id="number" type="number" placeholder="Enter your age" min=1 max=125 required><br>
+      
+        <!-- Which option best describes your current role -->
+        <label for="dropdown">Which option best describes your current role?</label><br>
+        <select class="form-control" id="dropdown" form="survey-form"><br>
+          <option class="form-control" value="" disabled selected>Select an option</option><br>
+          <option class="form-control" value="student">Student</option><br>
+          <option class="form-control" value="full-time-job">Full time job</option><br>
+          <option class="form-control" value="full-time-learner">Full time learner</option>
+          <option class="form-control" value="prefer-not">Prefer not to say</option>
+          <option class="form-control" value="other">Other</option><br>
+        </select><br>
+      
+        <!-- How likely is that you would recommend freeCodeCamp to a friend -->
+        <label for="recommendation">How likely is that you would recommend freeCodeCamp to a friend?</label><br>
+        <fieldset id="recommendation">
+          <label for="r_definitely"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_definitely" value="definitely" required>Definitely</label>
+          <label for="r_maybe"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_maybe" value="maybe" required>Maybe</label>
+          <label for="r_not_sure"><input type="radio" style= "height:17px ; width:17px" name="recommend" id="r_not_sure" value="notsure" required>Not sure</label>
+        </fieldset><br>
+        
+        <!-- What do you like most in FCC -->
+        <label for="likethemost">What do you like most in FCC?</label><br>
+        <select class="form-control" id="likethemost"><br>
+          <option class="form-control" value="" disabled selected>Select an option</option><br>
+          <option class="form-control" value="challenges">Challenges</option><br>
+          <option class="form-control" value="projects">Projects</option><br>
+          <option class="form-control" value="community">Community</option><br>
+          <option class="form-control" value="open-source">Open Source</option><br>
+        </select><br>
+      
+        <!-- Things that should be improved in the future -->
+        <label for="improvements">Things that should be improved in the future</label><br>
+        <fieldset id="improvements">
+          <legend>(<em>Check all that apply</em>)</legend>
+          <label for="c-fep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-fep" value="fep">Front-end Projects</label>
+          <label for="c-bep"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-bep" value="bep">Back-end Projects</label>
+          <label for="c-datav"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-datav" value="datav">Data Visualization</label>
+          <label for="c-chlgs"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-chlgs" value="chlgs">Challenges</label>
+          <label for="c-osc"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-osc" value="osc">Open Source Community</label>
+          <label for="c-ghr"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-ghr" value="ghr">Gitter help rooms</label>
+          <label for="c-vid"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-vid" value="vid">Videos</label>
+          <label for="c-meet"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-meet" value="meet">City Meetups</label>
+          <label for="c-wiki"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-wiki" value="wiki">Wiki</label>
+          <label for="c-forum"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-forum" value="forum">
+Forum</label>
+          <label for="c-addcours"><input type="checkbox" style= "height:17px ; width:17px" name="improve-checks" id="c-addcours" value="addcours">Additional Courses</label><br>
+        </fieldset><br>
+       
+        <!-- Any Comments or Suggestions -->
+        <label for="comments">Any Comments or Suggestions?</label><br>
+        <textarea style="height:50px;resize:vertical;" class="form-control" id="comments" placeholder="Enter a comment"></textarea><br>
+      </section><br>
+
+      <!-- submit -->
+       
+        
+      <button  class="btn btn-primary" type="submit" id="submit"><i class="fa fa-paper-plane">Submit</i>
+          </button><br></form>
+    
+  </main>
+ 
+</body>
+
